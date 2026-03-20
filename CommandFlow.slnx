@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/CommandFlow.Benchmarks/CommandFlow.Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/CommandFlow.DependencyInjection/CommandFlow.DependencyInjection.csproj" />
+    <Project Path="src/CommandFlow/CommandFlow.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CommandFlow.UnitTests/CommandFlow.UnitTests.csproj" />
+  </Folder>
+</Solution>

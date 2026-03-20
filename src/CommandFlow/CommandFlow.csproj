@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>CommandFlow</RootNamespace>
+    <AssemblyName>CommandFlow</AssemblyName>
+    <Description>A lightweight in-process messaging and CQRS library for .NET</Description>
+    <Authors>CommandFlow Contributors</Authors>
+    <PackageId>CommandFlow</PackageId>
+    <PackageTags>cqrs;mediator;messaging;commands;queries;pipeline</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ViacheslavMelnichenko/command-flow</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ViacheslavMelnichenko/command-flow</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
