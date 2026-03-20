@@ -74,5 +74,7 @@ Coverage is collected via **coverlet.collector** and configured in `coverage.run
 | Fluent config (behaviors) | `src/CommandFlow.DependencyInjection/CommandFlowConfiguration.cs` |
 | Test fakes | `tests/CommandFlow.UnitTests/Fakes/TestTypes.cs` |
 | Coverage config | `coverage.runsettings` |
+| CI workflow | `.github/workflows/ci.yml` |
+| Release workflow | `.github/workflows/release.yml` |
 | Benchmarks | `benchmarks/CommandFlow.Benchmarks/` |
 

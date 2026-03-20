@@ -28,7 +28,23 @@ jobs:
         run: dotnet build CommandFlow.slnx --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test tests/CommandFlow.UnitTests/CommandFlow.UnitTests.csproj --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
+        run: dotnet test tests/CommandFlow.UnitTests/CommandFlow.UnitTests.csproj --configuration Release --no-build --verbosity normal --settings coverage.runsettings --collect:"XPlat Code Coverage"
+
+      - name: Check 100% coverage
+        run: |
+          REPORT=$(find tests -name 'coverage.cobertura.xml' | head -1)
+          if [ -z "$REPORT" ]; then
+            echo "::error::No coverage report found"
+            exit 1
+          fi
+          LINE_RATE=$(grep -oP '(?<=line-rate=")[^"]+' "$REPORT" | head -1)
+          BRANCH_RATE=$(grep -oP '(?<=branch-rate=")[^"]+' "$REPORT" | head -1)
+          echo "Line rate:   $LINE_RATE"
+          echo "Branch rate: $BRANCH_RATE"
+          if [ "$LINE_RATE" != "1" ] || [ "$BRANCH_RATE" != "1" ]; then
+            echo "::error::Coverage is not 100% — line-rate=$LINE_RATE branch-rate=$BRANCH_RATE"
+            exit 1
+          fi
 
       - name: Upload coverage
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

@@ -5,12 +5,15 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -27,7 +30,7 @@ jobs:
         run: dotnet build CommandFlow.slnx --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test tests/CommandFlow.UnitTests/CommandFlow.UnitTests.csproj --configuration Release --no-build --verbosity normal
+        run: dotnet test tests/CommandFlow.UnitTests/CommandFlow.UnitTests.csproj --configuration Release --no-build --verbosity normal --settings coverage.runsettings
 
       - name: Pack CommandFlow
         run: dotnet pack src/CommandFlow/CommandFlow.csproj --configuration Release --no-build --output ./nupkgs
