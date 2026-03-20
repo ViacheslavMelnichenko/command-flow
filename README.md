@@ -1,10 +1,16 @@
-# CommandFlow
+<p align="center">
+  <img src="assets/icon.svg" alt="CommandFlow" width="120" />
+</p>
 
-A lightweight in-process messaging and CQRS library for .NET.
+<h1 align="center">CommandFlow</h1>
 
-[![CI](https://github.com/ViacheslavMelnichenko/command-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/ViacheslavMelnichenko/command-flow/actions/workflows/ci.yml)
-[![NuGet](https://img.shields.io/nuget/v/CommandFlow.svg)](https://www.nuget.org/packages/CommandFlow)
-[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/ViacheslavMelnichenko/command-flow)
+<p align="center">A lightweight in-process messaging and CQRS library for .NET.</p>
+
+<p align="center">
+  <a href="https://github.com/ViacheslavMelnichenko/command-flow/actions/workflows/ci.yml"><img src="https://github.com/ViacheslavMelnichenko/command-flow/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://www.nuget.org/packages/CommandFlow"><img src="https://img.shields.io/nuget/v/CommandFlow.svg" alt="NuGet"></a>
+  <a href="https://github.com/ViacheslavMelnichenko/command-flow"><img src="https://img.shields.io/badge/coverage-100%25-brightgreen" alt="Coverage"></a>
+</p>
 
 ## Overview
 
